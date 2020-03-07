@@ -18,6 +18,7 @@ body {
 #useguide .leftside {
   border-right: 2px solid gray;
 }
+
 #useguide ol {
   margin: 0px;
 }
@@ -50,4 +51,8 @@ body {
 }
 #system .sections {
   margin: auto;
+}
+.control {
+  margin: auto;
+  width: 50px;
 }
