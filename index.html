@@ -74,7 +74,17 @@
     </div>
     <div class="footer">
       <div id="controller">
-        <input type="button" value="자리 바꾸기" onclick="setRandomSeat()">
+        <form name="setPersonInfo">
+          이름 <input type="text" id="nameText">
+          <br/>
+          성별
+          <label><input type="radio" name="genderRadio" id="genderM" value="남">남</label>
+          <label><input type="radio" name="genderRadio" id="genderW" value="여">여</label>
+          <input type="button" value="입력" id="nameButton" onclick="setPerson();">
+        </form>
+        <form name="controlForm">
+          <input type="button" value="자리 바꾸기" onclick="setRandomSeat()">
+        </form>
       </div>
     </div>
   </body>
