@@ -1,16 +1,15 @@
 var elementlist;
 var pArray = [];
-
+var MpArray = [];
+var WpArray = [];
 function setRandomSeat() {
   elementlist = document.querySelectorAll("#class_seat li");
-  
   var rdArray = [];
   var rdResult;
-  while(true) {
+  while(rdArray.length !== pArray.length) {
     rdResult = Math.floor(Math.random()*pArray.length);
     if(rdArray.indexOf(rdResult) === -1) {
       rdArray.push(rdResult);
-      if(rdArray.length === pArray.length) break;
     }
   }
 
@@ -23,15 +22,23 @@ function Person(name, gender) {
   this.gender = gender;
 }
 function setPerson() {
+  elementlist = document.querySelectorAll("#class_seat li");
   var getNameElement = document.getElementById("nameText");
   var getGenderM = document.getElementById("genderM");
   var getGenderW = document.getElementById("genderW");
   var getName = getNameElement.value;
+  var getNameViewerElement = document.getElementById("viewer_namelist");
   if(getName != "") {
     if(getGenderM.checked == true) {
       pArray.push(new Person(getName, "m"));
+      MpArray.push(new Person(getName, "m"));
+      console.log(getNameViewerElement.innerHTML);
+      getNameViewerElement.innerHTML = getNameViewerElement.innerHTML + getName + "(남) ";
     } else if(getGenderW.checked == true) {
       pArray.push(new Person(getName, "w"));
+      WpArray.push(new Person(getName, "m"));
+      console.log(getNameViewerElement.innerHTML);
+      getNameViewerElement.innerHTML = getNameViewerElement.innerHTML + getName + "(여) ";
     } else {
       alert("gender not checked");
     }

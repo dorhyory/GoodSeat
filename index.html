@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <title>GoodSeat</title>
     <link rel="stylesheet" href="css/index.css">
-    <script type="text/javascript" src="js/index.js"></script>
   </head>
-  <body>
+  <body onload="">
     <div class="header">
       <div id="wrap_title">
         <h1>자리 바꾸기</h1>
         <hr/>
+      </div>
+      <div id="how_to_use">
+        1. 이름 칸에 이름 쓰고 성별 선택 후 오른쪽에 입력 클릭 <br/>
+        2. 원하는 인원 만큼 1번 동작 반복 <br/>
+        3. 입력이 끝났으면 자리 바꾸기 선택
+        (성별 분리하기는 현재 작동하지 않음) <br/>
+        4. 기존 인원 지우고 새로운 인원으로 사용할 때는 새로고침 후 사용
       </div>
     </div>
     <div class="container">
@@ -21,58 +27,64 @@
         <div class="class_seat_section">
           <p>1분단</p>
           <ul>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
+            <li><a href="#"><div>&nbsp;</div></a></li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
           </ul>
         </div>
         <div class="class_seat_section">
           <p>2분단</p>
           <ul>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
           </ul>
         </div>
         <div class="class_seat_section">
           <p>3분단</p>
           <ul>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
           </ul>
         </div>
         <div class="class_seat_section">
           <p>4분단</p>
           <ul>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
-            <li>가나다</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
+            <li>&nbsp;</li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer">
+      <div id="viewer">
+        <div id="nameviewer">
+          <p id="viewer_namelist">이름 목록: </p>
+          <br/>
+        </div>
+      </div>
       <div id="controller">
         <form name="setPersonInfo">
           이름 <input type="text" id="nameText">
@@ -84,8 +96,10 @@
         </form>
         <form name="controlForm">
           <input type="button" value="자리 바꾸기" onclick="setRandomSeat()">
+          <input type="checkbox" id="isGroupingGender">성별 분리하기
         </form>
       </div>
     </div>
+    <script type="text/javascript" src="js/index.js"></script>
   </body>
 </html>
